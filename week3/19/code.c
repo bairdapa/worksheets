@@ -62,6 +62,7 @@ void _addLink (struct linkedList *q, struct dlink *lnk, TYPE e) {
   newLink->prev = lnk->prev;
   lnk->prev->next = newLink;
   lnk->prev = newLink;
+  q->size++;
 }
 
 void _removeLink (struct linkedList *q, struct dlink *lnk) {
