@@ -4,6 +4,10 @@
 
 3. Based on the previous two pictures, can you describe what property characterizes an empty collection?
 
+You can check if the list is empty by seeing if the front sentinel points to the back one. This indicates that there are no links between the sentinels. Also, check the size!
+
+
+
 4. Draw a picture of a LinkedList with three or more values (in addition to the sentinels).
 
 5. Draw a picture after a value has been inserted into the front of the collection. Notice that this is between the front sentinel and the following element. Draw a picture showing an insertion into the back. Notice that this is again between the last element and the ending sentinel. Abstracting from these pictures, what would the function _addLink need to do, where the argument is the link that will follow the location in which the value is inserted.
