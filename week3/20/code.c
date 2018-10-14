@@ -67,8 +67,10 @@ TYPE dequeBack (struct deque *d) {
 
 void dequeRemoveFront (struct deque *d) {
   assert(d->size > 0);
-  if(d->size > 0) d->beg++;
+  d->beg++;
   if(d->beg >= d->capacity) d->beg = 0;
+  d->size--;
+  
 }
 
 void dequeRemoveBack (struct deque *d) {
