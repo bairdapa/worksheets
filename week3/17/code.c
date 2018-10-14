@@ -30,7 +30,9 @@ TYPE linkedListStackTop (struct linkedListStack *s) {
 
 void linkedListStackPop (struct linkedListStack *s) {
   assert(s->firstLink != 0);
+  struct link *tempLink = s->firstLink;
   s->firstLink = s->firstLink->next;
+  free(tempLink);
 }
 
 int linkedListStackIsEmpty (struct linkedListStack *s) {
