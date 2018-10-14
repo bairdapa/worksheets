@@ -1,0 +1,13 @@
+1. Draw a picture showing the values of the various data fields in an instance of ListQueue when it is first created.
+
+2. Draw a picture showing what it looks like after one element has been inserted.
+
+3. Based on the previous two drawings, can you determine what feature you can use to tell if a list is empty?
+
+4. Draw a picture showing what it looks like after two elements have been inserted.
+
+5. What is the algorithmic complexity of each of the queue operations?
+
+6. How difficult would it be to write the method addFront(newValue) that inserts a new element into the front of the collection? A container that supports adding values at either and, but removal from only one side, is sometimes termed a scroll.
+
+7. Explain why removing the value from the back would be difficult for this container. What would be the algorithmic complexity of the removeLast operation?
