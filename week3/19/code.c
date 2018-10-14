@@ -54,17 +54,29 @@ int LinkedListIsEmpty (struct linkedList *q) {
 /* write addLink and removeLink. Make sure they update the size field correctly */
 /* _addLink places a new link BEFORE the provide link, lnk */
 void _addLink (struct linkedList *q, struct dlink *lnk, TYPE e) {
-  
+  assert(lnk != 0);
+  struct dlink *newLink = (struct dlink *) malloc(sizeof(struct dlink));
+  assert(newLink != 0);
+  newLink->value = e;
+  newLink->prev = lnk;
+  newLink->next = lnk->next;
+  lnk->next->prev = newLink;
+  lnk->next = newLink;
 }
 
 void _removeLink (struct linkedList *q, struct dlink *lnk) {
-  
+  assert(lnk != 0);
+  lnk->prev->next = lnk->next;
+  lnk->next->prev = lnk->prev;
+  free(lnk);
 }
 
 TYPE LinkedListFront (struct linkedList *q) {
-  
+  assert(!LinkedListIsEmpty(q));
+  return q->frontSentinel->next->value;
 }
 
 TYPE LinkedListBack (struct linkedList *q) {
-  
+  assert(!LinkedListIsEmpty(q));
+  return q->backSentinel->prev->value;
 }
