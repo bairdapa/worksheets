@@ -58,10 +58,10 @@ void _addLink (struct linkedList *q, struct dlink *lnk, TYPE e) {
   struct dlink *newLink = (struct dlink *) malloc(sizeof(struct dlink));
   assert(newLink != 0);
   newLink->value = e;
-  newLink->prev = lnk;
-  newLink->next = lnk->next;
-  lnk->next->prev = newLink;
-  lnk->next = newLink;
+  newLink->next = lnk;
+  newLink->prev = lnk->prev;
+  lnk->prev->next = newLink;
+  lnk->prev = newLink;
 }
 
 void _removeLink (struct linkedList *q, struct dlink *lnk) {
