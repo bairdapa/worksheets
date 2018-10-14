@@ -73,5 +73,5 @@ void dequeRemoveFront (struct deque *d) {
 
 void dequeRemoveBack (struct deque *d) {
   assert(d->size > 0); 
-  if(d->size > 0) d->size--;
+  d->size--;
 }
