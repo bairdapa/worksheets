@@ -69,6 +69,8 @@ void _removeLink (struct linkedList *q, struct dlink *lnk) {
   lnk->prev->next = lnk->next;
   lnk->next->prev = lnk->prev;
   free(lnk);
+  lnk = 0;
+  q->size--;
 }
 
 TYPE LinkedListFront (struct linkedList *q) {
