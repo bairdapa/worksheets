@@ -18,17 +18,22 @@ void linkedListStackFree (struct linkedListStack *s) {
 void linkedListStackPush (struct linkedListStack *s, TYPE d) {
   struct link * newLink = (struct link *) malloc(sizeof(struct link));
   assert (newLink != 0);
-  /* Fix me */
+  newLink->value = d;
+  newLink->next = s->firstLink;
+  s-firstLink = newLink;
 }
 
 TYPE linkedListStackTop (struct linkedListStack *s) {
-  /* Fix me */
+  assert(s->firstLink != 0);
+  return s->firstLink;
 }
 
 void linkedListStackPop (struct linkedListStack *s) {
-  /* Fix me */
+  assert(s->firstLink != 0);
+  s->firstLink = s->firstLink->next;
 }
 
 int linkedListStackIsEmpty (struct linkedListStack *s) {
-  /* Fix me */
+  if(s->firstLink == 0) return 1;
+  return 0;
 }
