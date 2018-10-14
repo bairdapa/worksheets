@@ -33,6 +33,7 @@ void linkedListStackPop (struct linkedListStack *s) {
   struct link *tempLink = s->firstLink;
   s->firstLink = s->firstLink->next;
   free(tempLink);
+  tempLink = 0;
 }
 
 int linkedListStackIsEmpty (struct linkedListStack *s) {
