@@ -46,6 +46,7 @@ void dequeAddFront (struct deque *d, TYPE newValue) {
   d->beg--;
   if(d->beg == -1) d->beg = d->capacity-1;
   d->data[d->beg] = newValue;
+  d->size++;
 }
 
 void dequeAddBack (struct deque *d, TYPE newValue) {
