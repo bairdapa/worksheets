@@ -10,4 +10,8 @@
 
 6. Draw a picture of a linkedList with three or more values, then examine what is needed to remove both the first and the last element. Can you see how both of these operations can be implemented as a call on a common operation, called _removeLink?
 
+Pointer reassignment is needed. removeLink can be called with any link, whether in the front or back, due to the sentinels guarding the indices. 
+
 7. What is the algorithmic complexity of each of the deque operations?
+
+O(1), constant. 
