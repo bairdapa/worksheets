@@ -56,10 +56,12 @@ void dequeAddBack (struct deque *d, TYPE newValue) {
 }
 
 TYPE dequeFront (struct deque *d) {
+  assert(d->size > 0);
   return d->data[d->beg];
 }
 
 TYPE dequeBack (struct deque *d) {
+  assert(d->size > 0);
   return d->data[(d->beg + d->size) % d->capacity];
 }
 
