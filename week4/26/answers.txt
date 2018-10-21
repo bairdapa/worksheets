@@ -1,0 +1,67 @@
+Answers to Chart:
+--------------------------------------------------------------------------
+|     Dynamic Array |     LinkedListBag   |     Ordered Array Bag         |
+|Add:   O(1)+       |          O(1)       |              O(N)             |
+|Contains: O(N)     |         O(N)        |             O(log(N))         |
+|Remove: O(N)       |          O(N)       |              O(N)             |
+---------------------------------------------------------------------------
+
+
+Answers to questions:
+1. Complexity of binary search algorithm is O(log(N))
+2. Complexity of contains for orderedArrayBag is O(log(N))
+3. Complexity of addAt is O(N)
+4. Complexity of add for orderedArrayBag is O(N)
+5. Complexity of removeAt is O(N)
+
+
+
+
+
+void dyArrayAddAt (struct dyArray *da, int index, TYPE newElement) {
+   int i;
+   assert(index >= 0 && index <= da->size);
+   if (da->size >= da->capacity)
+                _dyArrayDoubleCapacity(da);
+   
+   /* you get to fill this in */
+   int i;
+   for (i = da->size; i > index; i--)
+      da->data[i] = da->data[i - 1];
+   da->data[index] = newElement;
+   da->size++;
+   
+   
+   
+   
+}
+
+
+
+ int orderedArrayContains (struct dyArray *da, TYPE testElement) {
+
+
+   assert(da->size != 0);
+      int binSearch = _binarySearch(da->data, da->size, testElement);
+      if (binSearch >= da->size){
+            return 0;
+      }
+      else if (da->data[binSearch] == testElement){
+            return 1;
+      }
+      else{
+            return 0;
+      }
+}
+
+
+ void orderedArrayRemove (struct dyArray *da, TYPE testElement) {
+
+      assert(da->size != 0);
+      int binSearch = _binarySearch(da->data, da->size, testElement);
+      if (binSearch < da->size && da->data[binSearch] == testElement){
+               removeAtDynArray(da, binSearch );
+      }
+
+}
+

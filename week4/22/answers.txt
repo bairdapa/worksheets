@@ -1,0 +1,10 @@
+1. What were the algorithmic complexities of the methods addLink and removeLink that you wrote back in linked list for Deque?
+
+addLink- 0(1)
+removeLink- 0(1)
+
+2. Given your answer to the previous question, what are the algorithmic complexities of the three principle Bag operations?
+
+add- 0(1)
+contains- 0(n)
+remove- 0(n)
