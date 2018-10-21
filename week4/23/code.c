@@ -15,12 +15,12 @@ return 0;
 
 
 TYPE dynArrayIteratorNext (struct dynArrayIterator *itr) {
-   return itr->da->data[itr->currentIndex];
+   	assert(DynArrIteratorHasNext(itr));
+	return itr->da->data[itr->currentIndex];
 }
 
 
-void dynArrayIteratorRemove (struct dynArrayIterator *itr) 
-{
-  dynArrayRemoveAt (itr->da, itr->currentIndex);
-  itr->currentIndex--;
+void dynArrayIteratorRemove (struct dynArrayIterator *itr) {	
+  	dynArrayRemoveAt (itr->da, itr->currentIndex);
+ 	itr->currentIndex--;
 }
