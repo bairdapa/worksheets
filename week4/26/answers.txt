@@ -1,0 +1,41 @@
+void dyArrayAddAt (struct dyArray *da, int index, TYPE newElement) {
+   int i;
+   assert(index >= 0 && index <= da->size);
+   if (da->size >= da->capacity)
+                _dyArrayDoubleCapacity(da);
+   
+   /* you get to fill this in */
+   
+   
+   
+   
+   
+}
+
+
+
+ int orderedArrayContains (struct dyArray *da, TYPE testElement) {
+
+
+
+
+
+
+
+
+
+
+}
+
+ void orderedArrayRemove (struct dyArray *da, TYPE testElement) {
+
+ 
+
+
+
+
+
+
+
+}
+
