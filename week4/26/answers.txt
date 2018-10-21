@@ -25,7 +25,11 @@ void dyArrayAddAt (struct dyArray *da, int index, TYPE newElement) {
                 _dyArrayDoubleCapacity(da);
    
    /* you get to fill this in */
-   
+   int i;
+   for (i = da->size; i > index; i--)
+      da->data[i] = da->data[i - 1];
+   da->data[index] = newElement;
+   da->size++;
    
    
    
