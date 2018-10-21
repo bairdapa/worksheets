@@ -19,7 +19,7 @@ TYPE linkedListIteratorNext (struct linkedListIterator *itr) {
 void linkedListIteratorRemove (struct linkedListIterator *itr) {
    assert(itr != 0);
    
-   struct dlink *temp = itr->currentLink;
+   struct dLink *temp = itr->currentLink;
    itr->currentLink = itr->currentLink->prev;
    _removeLink(itr->lst, temp);
 }
