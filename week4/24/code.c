@@ -2,7 +2,7 @@ int linkedListIteratorHasNext (struct linkedListIterator *itr) {
    assert(itr != 0);
    
    if(itr->currentLink->next != itr->lst->backSentinel){
-      itr->currentLink = itr->currentLink->next
+      itr->currentLink = itr->currentLink->next;
       return 1;
    }
    else{
