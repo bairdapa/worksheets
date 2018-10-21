@@ -1,3 +1,14 @@
+Answers to questions:
+1. Complexity of binary search algorithm is O(log(N))
+2. Complexity of contains for orderedArrayBag is O(log(N))
+3. Complexity of addAt is O(N)
+4. Complexity of add for orderedArrayBag is O(N)
+5. Complexity of removeAt is O(N)
+
+
+
+
+
 void dyArrayAddAt (struct dyArray *da, int index, TYPE newElement) {
    int i;
    assert(index >= 0 && index <= da->size);
