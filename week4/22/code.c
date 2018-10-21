@@ -1,4 +1,5 @@
 int linkedListContains (struct linkedList *lst, TYPE e) {
+  assert(lst != 0);
   struct linkedList tmp = lst->frontSentinel->next;
   while(tmp != lst->backSentinel) 
   {
@@ -13,6 +14,7 @@ return 0;
 
 
 void linkedListRemove (struct linkedList *lst, TYPE e) {
+  assert(lst != 0); 
   struct linkedList tmp = lst->frontSentinel->next;
 	int found = 0;
   while(tmp != lst->backSentinel && found != 1) 
