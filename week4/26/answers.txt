@@ -37,25 +37,27 @@ void dyArrayAddAt (struct dyArray *da, int index, TYPE newElement) {
  int orderedArrayContains (struct dyArray *da, TYPE testElement) {
 
 
-
-
-
-
-
-
-
-
+   assert(da->size != 0);
+      int binSearch = _binarySearch(da->data, da->size, testElement);
+      if (binSearch >= da->size){
+            return 0;
+      }
+      else if (da->data[binSearch] == testElement){
+            return 1;
+      }
+      else{
+            return 0;
+      }
 }
+
 
  void orderedArrayRemove (struct dyArray *da, TYPE testElement) {
 
- 
-
-
-
-
-
-
+      assert(da->size != 0);
+      int binSearch = _binarySearch(da->data, da->size, testElement);
+      if (binSearch < da->size && da->data[binSearch] == testElement){
+               removeAtDynArray(da, binSearch );
+      }
 
 }
 
