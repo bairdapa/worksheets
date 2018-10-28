@@ -48,6 +48,8 @@ int containsBST (struct BinarySearchTree *tree, TYPE d) {
 		else
 			current = current->right;
 	}
+	
+	return 0;
 }
 
 void removeBST (struct BinarySearchTree *tree, TYPE d) {
