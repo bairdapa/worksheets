@@ -18,7 +18,7 @@ struct Node * _nodeAddBST (struct Node *current, TYPE newValue) {
 	
 	if(current == 0)
 	{
-		newNode = malloc(sizeof(struct Node));
+		newNode = (struct Node*)malloc(sizeof(struct Node));
 		assert(newNode != 0);
 		newNode->value = value;
 		newNode->left = newNode->right = 0;
