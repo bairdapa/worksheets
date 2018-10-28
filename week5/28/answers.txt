@@ -5,15 +5,23 @@ Answer: See pdf image
 2. What is the height of the tree from #1? What is the height of the subtree rooted at
 the node holding the value 22? What is the depth of the node holding the value
 22?
-Answer: height of tree is 3, heights of subtree is 2, depth is 1
+Answer: Height of tree is 3. 
+        Height of subtree is 2.
+        Depth is 1.
 
 3. Add the following numbers, in the order given to a binary search tree. 3, 14, 15,
 20, 25, 30, 33, 62, 200.
+Answer: See pdf image
 
 4. Is the tree from #3 balanced? Why not? What is the execution time required for
 searching for a value in this tree?
+Answer: No, it is not balanced.  
+       Because the values given were sorted in ascending oder, so no left nodes.
+       Execution time is O(n)
 
 5. Add a new value, 145, to the tree from #1
+Answer: See pdf image
 
 6. Remove the value 67 from the tree from #1. What value did you replace it with
 and why?
+Answer: 75, because it is the leftmost child of the right subtree.
