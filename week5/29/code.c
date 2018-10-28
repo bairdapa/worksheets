@@ -102,7 +102,7 @@ struct Node * _nodeRemoveBST (struct Node * current, TYPE d) {
 			current->right = _removeLeftMostChild(current->right);
 		}
 	} 
-	else if (value < current->value) 
+	else if(value < current->value) 
 	{
 		current->left = _nodeRemoveBST(current->left, value);
 	} 
