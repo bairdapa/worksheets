@@ -1,0 +1,6 @@
+Insert the following values, in the order that they are given into an AVL Tree.
+1) 30,20,50,40,60,70
+2) 50,22,80,70,75,73
+3) 75, 70, 100, 60, 80, 105,77, 120
+4) Take the tree from #3 and remove 60
+5) Take the tree from #3. Remove 120. Remove 60.
