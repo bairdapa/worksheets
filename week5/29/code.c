@@ -70,7 +70,7 @@ TYPE _leftMostChild (struct Node * current) {
 }
 
 struct node * _removeLeftmostChild (struct Node *current) {
-	assert(current != 0)
+	assert(current != 0);
 	
 	struct Node *temp = current->right;
 
