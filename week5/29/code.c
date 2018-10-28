@@ -46,7 +46,7 @@ int containsBST (struct BinarySearchTree *tree, TYPE d) {
 		else if(value < current->value) 
 			current = current->left;
 		else
-			current = current-right;
+			current = current->right;
 	}
 }
 
