@@ -44,6 +44,7 @@ struct AVLNode *_removeNode(struct AVLNode *cur, TYPE val) {
       cur->value = _leftMost(cur->right);
       cur->right = _removeLeftmost(cur->right);
     }
+  }
   else if(val < cur->value) 
   {
 	  cur->left = _removeNode(cur->left, value);
