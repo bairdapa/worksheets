@@ -32,5 +32,26 @@ struct AVLNode *_removeLeftmost(struct AVLNode *cur) {
 }
 
 struct AVLNode *_removeNode(struct AVLNode *cur, TYPE val) {
-//FIXME
+  if(cur->value == value)
+  {
+    if(cur->right == 0)
+    {
+      struct AVLNode *removeNode = cur->left;
+      free(cur);
+    }
+    else
+    {
+      cur->value = _leftMost(cur->right);
+      cur->right = _removeLeftmost(cur->right);
+    }
+  else if(val < cur->value) 
+  {
+	  cur->left = _removeNode(cur->left, value);
+  } 
+  else 
+  { 
+	  cur->right = _removeNode(cur->right, value);  
+  }
+  _balance(cur);   
+  return cur;
 }
