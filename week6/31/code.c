@@ -1,8 +1,31 @@
 struct AVLnode * _rotateLeft (struct AVLnode * current) {
-//FIXME
+	if(current->right != 0) 
+	{
+		struct AVLnode *temp = current->right->left;
+		struct AVLnode *newNode = current->right;
+		
+		newNode->left = current;
+		current->right = temp;
+
+		_setHeight(current);
+		_setHeight(newNode);
+	}
+	return current;
 }
+
 struct AVLnode * _rotateRight (struct AVLnode * current) {
-//FIXME
+	if (current->left != 0) 
+	{
+		struct AVLnode *temp = current->left->right;
+		struct AVLnode *newNode = current->left;
+		
+		newNode->right = current;
+		current->left = temp;
+	
+		_setHeight(current);
+		_setHeight(newNode);
+	}
+	return newNode;
 }
 
 void removeAVLTree(struct AVLTree *tree, TYPE val) {
@@ -32,27 +55,28 @@ struct AVLNode *_removeLeftmost(struct AVLNode *cur) {
 }
 
 struct AVLNode *_removeNode(struct AVLNode *cur, TYPE val) {
-  if(cur->value == value)
-  {
-    if(cur->right == 0)
-    {
-      struct AVLNode *removeNode = cur->left;
-      free(cur);
-    }
-    else
-    {
-      cur->value = _leftMost(cur->right);
-      cur->right = _removeLeftmost(cur->right);
-    }
-  }
-  else if(val < cur->value) 
-  {
-	  cur->left = _removeNode(cur->left, value);
-  } 
-  else 
-  { 
-	  cur->right = _removeNode(cur->right, value);  
-  }
-  _balance(cur);   
-  return cur;
+	if(cur->value == value)
+  	{
+    		if(cur->right == 0)
+    		{
+			struct AVLNode *temp = cur->left;
+			free(cur);
+			return temp;
+		}
+	}
+	else
+    	{
+		cur->value = _leftMost(cur->right);
+		cur->right = _removeLeftmost(cur->right);
+	}
+	else if(val < cur->value) 
+	{
+		cur->left = _removeNode(cur->left, value);
+	}
+	else 
+	{
+		cur->right = _removeNode(cur->right, value);  
+	}
+	_balance(cur);   
+	return cur;
 }
