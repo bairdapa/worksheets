@@ -63,11 +63,11 @@ struct AVLNode *_removeNode(struct AVLNode *cur, TYPE val) {
 			free(cur);
 			return temp;
 		}
-	}
-	else
-    	{
-		cur->value = _leftMost(cur->right);
-		cur->right = _removeLeftmost(cur->right);
+		else
+    		{
+			cur->value = _leftMost(cur->right);
+			cur->right = _removeLeftmost(cur->right);
+		}
 	}
 	else if(val < cur->value) 
 	{
