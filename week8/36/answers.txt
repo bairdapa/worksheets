@@ -1,0 +1,4 @@
+containsKey (KEYTYPE key)             O(n)
+VALUTYPE get (KEYTYPE key)            O(n)
+put (KEYTYPE key, VALUETYPE value)    O(n) 
+remove (KEYTYPE key)                  O(n)
