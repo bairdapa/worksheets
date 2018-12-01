@@ -1,0 +1,6 @@
+Step 1: time complexity of O(n log n)
+Step 2: time complexity of o(n)
+
+Copying to a sorted bag would take O(n^2) time, which makes it inefficient with this data structure.
+
+Disadvantage: The sorting does not occur in place.
