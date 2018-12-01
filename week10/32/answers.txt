@@ -4,3 +4,8 @@ Step 2: time complexity of o(n)
 Copying to a sorted bag would take O(n^2) time, which makes it inefficient with this data structure.
 
 Disadvantage: The sorting does not occur in place.
+
+
+An indexed loop is best for step one.
+An interator loop is better for step two.
+This is because for a tree, a size function is not necessarily a fast action, which would make index based loop inefficient.
